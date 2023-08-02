@@ -50,12 +50,16 @@ chmod +x monitor-install.sh
 ![изображение](https://github.com/ze0n4ri0t/TZDevops/assets/24235399/b2959374-cfeb-4d18-9b6c-d69d748e0b37)
 
 Log in to the Grapha default user admin default password admin
+
 Add Dasboards with metrics
 
 CPU
+
 rate(node_cpu_seconds_total{instance="localhost:9100",mode!="idle"}[1m])
 
+
 Memory
+
 node_memory_MemTotal_bytes{instance="localhost:9100"} - node_memory_MemFree_bytes{instance="localhost:9100"} - node_memory_Buffers_bytes{instance="localhost:9100"} - node_memory_Cached_bytes{instance="localhost:9100"}
 
 node_memory_Buffers_bytes{instance="localhost:9100"}
@@ -64,15 +68,20 @@ node_memory_Cached_bytes{instance="localhost:9100"}
 
 node_memory_MemFree_bytes{instance="localhost:9100"}
 
+
 Disk usage
+
 node_filesystem_size_bytes{device="/dev/sda1",instance="localhost:9100"} - node_filesystem_avail_bytes{device="/dev/sda1",instance="localhost:9100"}
 
 node_filesystem_avail_bytes{device="/dev/sda1",instance="localhost:9100"}
 
+
 Network
+
 rate(node_network_receive_bytes_total{device="ens18"}[5m])
 
 rate(node_network_transmit_bytes_total{device="ens18"}[5m])
+
 # Expected result
 ![изображение](https://github.com/ze0n4ri0t/TZDevops/assets/24235399/f3a129a4-0a1d-4f21-b629-05e871590204)
 
