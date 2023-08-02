@@ -5,7 +5,7 @@ Debian or Ununtu host
 
 login to the host
 
-install git and clone repo
+install git and clone repo, run commands:
 
 sudo apt install git -y
 
