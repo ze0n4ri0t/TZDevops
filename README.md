@@ -1,6 +1,5 @@
 # TZDevops
-
-# Prerequisites: 
+ Prerequisites: 
 Debian or Ununtu host
 
 login to the host
