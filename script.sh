@@ -24,7 +24,6 @@ version: '3'
 services:
   db:
     image: mysql:8.0.27
-    command: '--default-authentication-plugin=mysql_native_password'
     volumes:
       - db_data:/var/lib/mysql
     restart: always
