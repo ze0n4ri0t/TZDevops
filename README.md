@@ -41,3 +41,13 @@ Example:
 ![изображение](https://github.com/ze0n4ri0t/TZDevops/assets/24235399/1e5e9856-dde4-4bab-ba5f-1cdbc55ab016)
 
 
+# Prometheus install
+chmod +x monitor-install.sh
+
+./monitor-install.sh
+
+# Expected results:
+
+![изображение](https://github.com/ze0n4ri0t/TZDevops/assets/24235399/b2959374-cfeb-4d18-9b6c-d69d748e0b37)
+
+
