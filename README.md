@@ -23,3 +23,14 @@ chmod +x script.sh
 Run script 
 
 ./script.sh
+
+Edit hosts file, on Windows C:\Windows\System32\drivers\etc\hosts on Linux /etc/hosts
+
+add line: xx.xx.xx.xx blog.example.com where xx.xx.xx.xx is the ip of the host with Wordpress installed
+
+Example:
+
+192.168.4.23	blog.example.com
+
+Expected results
+
