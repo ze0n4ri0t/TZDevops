@@ -1,26 +1,31 @@
 # TZDevops
+
+# Prerequisites: 
+Debian or Ununtu host
+
 login to the host
 
 install git and clone repo
 
 sudo apt install git -y
 
-
+git clone https://github.com/ze0n4ri0t/TZDevops.git
 
 sudo addgroup docker
 
 sudo usermod -aG docker $USER
 
-make sudo to run without password promt
+(Optional) make sudo to run without password promt
 
-(Optional)
 run visudo and add line "user    ALL=(ALL) NOPASSWD:ALL" where user is a username of the user that logged in, and who will run script
-
-chmod +x script.sh
 
 !!!! Relogin !!!! (User group setting not will be applied without it)
 
 Run script 
+
+cd TZDevops/
+
+chmod +x script.sh
 
 ./script.sh
 
@@ -32,5 +37,7 @@ Example:
 
 192.168.4.23	blog.example.com
 
-Expected results
+# Expected results:
+![изображение](https://github.com/ze0n4ri0t/TZDevops/assets/24235399/1e5e9856-dde4-4bab-ba5f-1cdbc55ab016)
+
 
