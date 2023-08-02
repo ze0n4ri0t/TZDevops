@@ -1,3 +1,4 @@
+./script.sh
 #
 
 
@@ -366,3 +367,108 @@ Digest: sha256:8a252da491a86d065a0cecc78cd1bac43d24a19c91f578f9eef74d00749925d8
 Status: Downloaded newer image for wordpress:latest
 Creating tzdevops_wordpress_1 ... done
 Creating tzdevops_db_1        ... done
+
+
+./monitor-install.sh
+sudo: unable to resolve host blog.example.com: Name or service not known
+127.0.0.1       blog.example.com
+--2023-08-01 23:37:57--  https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/6838921/58fa9cb9-9b8c-4746-b2ca-8ffd93221ec3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230802T033757Z&X-Amz-Expires=300&X-Amz-Signature=63fee79ab967468592b7fb252f3b123bf4501bd6d37ff37528a09c9726976044&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=6838921&response-content-disposition=attachment%3B%20filename%3Dprometheus-2.46.0.linux-amd64.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2023-08-01 23:37:57--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/6838921/58fa9cb9-9b8c-4746-b2ca-8ffd93221ec3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230802T033757Z&X-Amz-Expires=300&X-Amz-Signature=63fee79ab967468592b7fb252f3b123bf4501bd6d37ff37528a09c9726976044&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=6838921&response-content-disposition=attachment%3B%20filename%3Dprometheus-2.46.0.linux-amd64.tar.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.108.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 94876162 (90M) [application/octet-stream]
+Saving to: ‘prometheus-2.46.0.linux-amd64.tar.gz’
+
+prometheus-2.46.0.linux-amd64.tar.gz           100%[==================================================================================================>]  90.48M  10.5MB/s    in 9.4s
+
+2023-08-01 23:38:07 (9.60 MB/s) - ‘prometheus-2.46.0.linux-amd64.tar.gz’ saved [94876162/94876162]
+
+prometheus-2.46.0.linux-amd64/
+prometheus-2.46.0.linux-amd64/console_libraries/
+prometheus-2.46.0.linux-amd64/console_libraries/prom.lib
+prometheus-2.46.0.linux-amd64/console_libraries/menu.lib
+prometheus-2.46.0.linux-amd64/NOTICE
+prometheus-2.46.0.linux-amd64/promtool
+prometheus-2.46.0.linux-amd64/prometheus.yml
+prometheus-2.46.0.linux-amd64/LICENSE
+prometheus-2.46.0.linux-amd64/prometheus
+prometheus-2.46.0.linux-amd64/consoles/
+prometheus-2.46.0.linux-amd64/consoles/node-disk.html
+prometheus-2.46.0.linux-amd64/consoles/node-cpu.html
+prometheus-2.46.0.linux-amd64/consoles/prometheus.html
+prometheus-2.46.0.linux-amd64/consoles/prometheus-overview.html
+prometheus-2.46.0.linux-amd64/consoles/node.html
+prometheus-2.46.0.linux-amd64/consoles/index.html.example
+prometheus-2.46.0.linux-amd64/consoles/node-overview.html
+
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+User=prometheus
+Group=prometheus
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/bin/prometheus   --config.file=/etc/prometheus/prometheus.yml   --storage.tsdb.path=/data   --web.console.templates=/etc/prometheus/consoles   --web.console.libraries=/etc/prometheus/console_libraries   --web.listen-address=0.0.0.0:9090   --web.enable-lifecycle
+
+[Install]
+WantedBy=multi-user.target
+
+Created symlink /etc/systemd/system/multi-user.target.wants/prometheus.service → /etc/systemd/system/prometheus.service.
+--2023-08-01 23:38:10--  https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/9524057/5509b569-5c34-471e-8598-c05c0733bb7f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230802T033810Z&X-Amz-Expires=300&X-Amz-Signature=26ac06cceea110cbdf387c8df085f12e4a3c329d37a51ede2c2bb524604f93e2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=9524057&response-content-disposition=attachment%3B%20filename%3Dnode_exporter-1.6.1.linux-amd64.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2023-08-01 23:38:10--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/9524057/5509b569-5c34-471e-8598-c05c0733bb7f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230802T033810Z&X-Amz-Expires=300&X-Amz-Signature=26ac06cceea110cbdf387c8df085f12e4a3c329d37a51ede2c2bb524604f93e2&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=9524057&response-content-disposition=attachment%3B%20filename%3Dnode_exporter-1.6.1.linux-amd64.tar.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.109.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 10368103 (9.9M) [application/octet-stream]
+Saving to: ‘node_exporter-1.6.1.linux-amd64.tar.gz’
+
+node_exporter-1.6.1.linux-amd64.tar.gz         100%[==================================================================================================>]   9.89M  8.89MB/s    in 1.1s
+
+2023-08-01 23:38:12 (8.89 MB/s) - ‘node_exporter-1.6.1.linux-amd64.tar.gz’ saved [10368103/10368103]
+
+node_exporter-1.6.1.linux-amd64/
+node_exporter-1.6.1.linux-amd64/NOTICE
+node_exporter-1.6.1.linux-amd64/node_exporter
+node_exporter-1.6.1.linux-amd64/LICENSE
+
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/bin/node_exporter     --collector.logind
+
+[Install]
+WantedBy=multi-user.target
+
+Created symlink /etc/systemd/system/multi-user.target.wants/node_exporter.service → /etc/systemd/system/node_exporter.service.
+
+  - job_name: node_export
+    static_configs:
+      - targets: [localhost:9100]
+
