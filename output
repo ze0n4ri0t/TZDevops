@@ -1,4 +1,3 @@
-./script.sh
 #
 
 
@@ -8,11 +7,11 @@ deb-src http://mirror.corbina.net/debian/ buster main
 
 deb http://security.debian.org/debian-security buster/updates main contrib
 deb-src http://security.debian.org/debian-security buster/updates main contrib
-Hit:1 http://mirror.corbina.net/debian buster InRelease
-Get:2 http://security.debian.org/debian-security buster/updates InRelease [34.8 kB]
+Get:1 http://security.debian.org/debian-security buster/updates InRelease [34.8 kB]
+Hit:2 http://mirror.corbina.net/debian buster InRelease
 Get:3 http://security.debian.org/debian-security buster/updates/main Sources [419 kB]
 Get:4 http://security.debian.org/debian-security buster/updates/main amd64 Packages [545 kB]
-Fetched 999 kB in 1s (1,713 kB/s)
+Fetched 999 kB in 0s (2,670 kB/s)
 Reading package lists... Done
 Reading package lists... Done
 Building dependency tree
@@ -29,8 +28,8 @@ The following NEW packages will be installed:
 Need to get 7,693 kB of archives.
 After this operation, 16.0 MB of additional disk space will be used.
 Get:1 http://security.debian.org/debian-security buster/updates/main amd64 libcurl4 amd64 7.64.0-4+deb10u6 [335 kB]
-Get:2 http://mirror.corbina.net/debian buster/main amd64 libassuan0 amd64 2.5.2-1 [49.4 kB]
-Get:3 http://security.debian.org/debian-security buster/updates/main amd64 curl amd64 7.64.0-4+deb10u6 [266 kB]
+Get:2 http://security.debian.org/debian-security buster/updates/main amd64 curl amd64 7.64.0-4+deb10u6 [266 kB]
+Get:3 http://mirror.corbina.net/debian buster/main amd64 libassuan0 amd64 2.5.2-1 [49.4 kB]
 Get:4 http://security.debian.org/debian-security buster/updates/main amd64 libksba8 amd64 1.3.5-2+deb10u2 [102 kB]
 Get:5 http://mirror.corbina.net/debian buster/main amd64 gpgconf amd64 2.2.12-1+deb10u2 [510 kB]
 Get:6 http://mirror.corbina.net/debian buster/main amd64 libnpth0 amd64 1.6-1 [18.4 kB]
@@ -44,7 +43,7 @@ Get:13 http://mirror.corbina.net/debian buster/main amd64 gpg-wks-client amd64 2
 Get:14 http://mirror.corbina.net/debian buster/main amd64 gpg-wks-server amd64 2.2.12-1+deb10u2 [478 kB]
 Get:15 http://mirror.corbina.net/debian buster/main amd64 gpgsm amd64 2.2.12-1+deb10u2 [604 kB]
 Get:16 http://mirror.corbina.net/debian buster/main amd64 gnupg all 2.2.12-1+deb10u2 [715 kB]
-Fetched 7,693 kB in 3s (2,664 kB/s)
+Fetched 7,693 kB in 3s (2,666 kB/s)
 Selecting previously unselected package libcurl4:amd64.
 (Reading database ... 34729 files and directories currently installed.)
 Preparing to unpack .../00-libcurl4_7.64.0-4+deb10u6_amd64.deb ...
@@ -117,7 +116,7 @@ Hit:1 http://security.debian.org/debian-security buster/updates InRelease
 Hit:2 http://mirror.corbina.net/debian buster InRelease
 Get:3 https://download.docker.com/linux/debian buster InRelease [54.0 kB]
 Get:4 https://download.docker.com/linux/debian buster/stable amd64 Packages [41.7 kB]
-Fetched 95.7 kB in 0s (280 kB/s)
+Fetched 95.7 kB in 0s (285 kB/s)
 Reading package lists... Done
 Reading package lists... Done
 Building dependency tree
@@ -140,15 +139,15 @@ Need to get 123 MB of archives.
 After this operation, 467 MB of additional disk space will be used.
 Get:1 http://security.debian.org/debian-security buster/updates/main amd64 dbus-user-session amd64 1.12.24-0+deb10u1 [97.9 kB]
 Get:2 http://security.debian.org/debian-security buster/updates/main amd64 libglib2.0-0 amd64 2.58.3-2+deb10u4 [1,259 kB]
-Get:3 https://download.docker.com/linux/debian buster/stable amd64 containerd.io amd64 1.6.22-1 [28.4 MB]
-Get:4 http://mirror.corbina.net/debian buster/main amd64 pigz amd64 2.4-1 [57.8 kB]
-Get:5 http://mirror.corbina.net/debian buster/main amd64 binutils-common amd64 2.31.1-16 [2,073 kB]
-Get:6 http://security.debian.org/debian-security buster/updates/main amd64 libglib2.0-data all 2.58.3-2+deb10u4 [1,110 kB]
+Get:3 http://mirror.corbina.net/debian buster/main amd64 pigz amd64 2.4-1 [57.8 kB]
+Get:4 https://download.docker.com/linux/debian buster/stable amd64 containerd.io amd64 1.6.22-1 [28.4 MB]
+Get:5 http://security.debian.org/debian-security buster/updates/main amd64 libglib2.0-data all 2.58.3-2+deb10u4 [1,110 kB]
+Get:6 http://mirror.corbina.net/debian buster/main amd64 binutils-common amd64 2.31.1-16 [2,073 kB]
 Get:7 https://download.docker.com/linux/debian buster/stable amd64 docker-buildx-plugin amd64 0.11.2-1~debian.10~buster [28.2 MB]
-Get:8 https://download.docker.com/linux/debian buster/stable amd64 docker-ce-cli amd64 5:24.0.5-1~debian.10~buster [13.3 MB]
-Get:9 http://mirror.corbina.net/debian buster/main amd64 libbinutils amd64 2.31.1-16 [478 kB]
-Get:10 https://download.docker.com/linux/debian buster/stable amd64 docker-ce amd64 5:24.0.5-1~debian.10~buster [22.8 MB]
-Get:11 http://mirror.corbina.net/debian buster/main amd64 binutils-x86-64-linux-gnu amd64 2.31.1-16 [1,823 kB]
+Get:8 http://mirror.corbina.net/debian buster/main amd64 libbinutils amd64 2.31.1-16 [478 kB]
+Get:9 https://download.docker.com/linux/debian buster/stable amd64 docker-ce-cli amd64 5:24.0.5-1~debian.10~buster [13.3 MB]
+Get:10 http://mirror.corbina.net/debian buster/main amd64 binutils-x86-64-linux-gnu amd64 2.31.1-16 [1,823 kB]
+Get:11 https://download.docker.com/linux/debian buster/stable amd64 docker-ce amd64 5:24.0.5-1~debian.10~buster [22.8 MB]
 Get:12 https://download.docker.com/linux/debian buster/stable amd64 docker-ce-rootless-extras amd64 5:24.0.5-1~debian.10~buster [9,032 kB]
 Get:13 https://download.docker.com/linux/debian buster/stable amd64 docker-compose-plugin amd64 2.20.2-1~debian.10~buster [11.9 MB]
 Get:14 http://mirror.corbina.net/debian buster/main amd64 binutils amd64 2.31.1-16 [56.8 kB]
@@ -172,7 +171,7 @@ Get:31 http://mirror.corbina.net/debian buster/main amd64 docker-compose all 1.2
 Get:32 http://mirror.corbina.net/debian buster/main amd64 libltdl7 amd64 2.4.6-9 [390 kB]
 Get:33 http://mirror.corbina.net/debian buster/main amd64 shared-mime-info amd64 1.10-1 [766 kB]
 Get:34 http://mirror.corbina.net/debian buster/main amd64 xdg-user-dirs amd64 0.17-2 [53.8 kB]
-Fetched 123 MB in 13s (9,793 kB/s)
+Fetched 123 MB in 13s (9,348 kB/s)
 Extracting templates from packages: 100%
 Selecting previously unselected package pigz.
 (Reading database ... 34977 files and directories currently installed.)
@@ -325,20 +324,22 @@ Executing: /lib/systemd/systemd-sysv-install enable docker
 Creating network "tzdevops_default" with the default driver
 Creating volume "tzdevops_db_data" with default driver
 Creating volume "tzdevops_wp_data" with default driver
-Pulling db (mariadb:10.6.4-focal)...
-10.6.4-focal: Pulling from library/mariadb
-7b1a6ab2e44d: Pull complete
-034655750c88: Pull complete
-f0b757a2a0f0: Pull complete
-5c37daf8b6b5: Pull complete
-b4cd9409b0f6: Pull complete
-dbcda06785eb: Pull complete
-a34cd90f184c: Pull complete
-fd6cef4ce489: Pull complete
-3cb89a1550ea: Pull complete
-df9f153bd930: Pull complete
-Digest: sha256:c014ba1efc5dbd711d0520c7762d57807f35549de3414eb31e942a420c8a2ed2
-Status: Downloaded newer image for mariadb:10.6.4-focal
+Pulling db (mysql:8.0.27)...
+8.0.27: Pulling from library/mysql
+72a69066d2fe: Pull complete
+93619dbc5b36: Pull complete
+99da31dd6142: Pull complete
+626033c43d70: Pull complete
+37d5d7efb64e: Pull complete
+ac563158d721: Pull complete
+d2ba16033dad: Pull complete
+688ba7d5c01a: Pull complete
+00e060b6d11d: Pull complete
+1c04857f594f: Pull complete
+4d7cfa90e6ea: Pull complete
+e0431212d27d: Pull complete
+Digest: sha256:e9027fe4d91c0153429607251656806cc784e914937271037f7738bd5b8e7709
+Status: Downloaded newer image for mysql:8.0.27
 Pulling wordpress (wordpress:latest)...
 latest: Pulling from library/wordpress
 1d5252f66ea9: Pull complete
@@ -364,5 +365,5 @@ c9a9bf225501: Pull complete
 47189e2c5874: Pull complete
 Digest: sha256:8a252da491a86d065a0cecc78cd1bac43d24a19c91f578f9eef74d00749925d8
 Status: Downloaded newer image for wordpress:latest
-Creating tzdevops_db_1        ... done
 Creating tzdevops_wordpress_1 ... done
+Creating tzdevops_db_1        ... done
