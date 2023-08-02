@@ -95,5 +95,13 @@ echo "
 
 curl -X POST http://localhost:9090/-/reload
 
+
+sudo apt-get install -y adduser libfontconfig1
+wget https://dl.grafana.com/enterprise/release/grafana-enterprise_10.0.3_amd64.deb
+sudo dpkg -i grafana-enterprise_10.0.3_amd64.deb
+sudo systemctl daemon-reload
+sudo systemctl enable grafana-server
+sudo systemctl start grafana-server
+
 cd ~
 rm -rf ~/tmp
