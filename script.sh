@@ -23,7 +23,7 @@ echo "
 version: '3'
 services:
   db:
-    image: mysql:8.0.27
+    image: mysql:5.7
     volumes:
       - db_data:/var/lib/mysql
     restart: always
